@@ -1,6 +1,6 @@
 {
-  "name": "validate-object-props",
-  "version": "1.0.2",
+  "name": "try-to-validate",
+  "version": "1.0.0",
   "description": "> A simple function to validate if nested object properties exist.",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yatki/validate-object-props"
+    "url": "https://github.com/yatki/try-to-validate"
   },
-  "keywords": [],
-  "author": "Mehmet Yatkı",
+  "keywords": [
+    "Try",
+    "Catch",
+    "TypeError",
+    "Validate",
+    "Object",
+    "Property",
+    "Properties",
+    "Undefined",
+    "Null",
+    "Exception"
+  ],
+  "author": "Mehmet Yatkı <mehmet@yatki.com>",
   "email": "mehmet@yatki.com",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yatki/validate-object-props/issues"
+    "url": "https://github.com/yatki/try-to-validate/issues"
   },
-  "homepage": "https://github.com/yatki/validate-object-props"
+  "homepage": "https://github.com/yatki/try-to-validate"
 }
