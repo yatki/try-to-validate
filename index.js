@@ -1,4 +1,4 @@
-exports.validateObjectProps = function(cb) {
+exports.tryToValidate = function(cb) {
   try {
     return cb();
   } catch (e) {

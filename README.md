@@ -1,8 +1,9 @@
-# Validate Object Props
+# Try to Validate
 > A simple function to validate if nested object properties exist.
 
 ## Why
 
+### 1. Avoid writing long if conditions for object properties
 When you have to deal with big objects which have nested properties, you always have to properly check if the property exits.
 
 So probably you will end up a code like below:
@@ -15,30 +16,37 @@ if (me && me.x && me.x.y && me.x.y.z === 'something') {
 
 Otherwise you may get `Uncaught TypeError: Cannot read property 'y' of undefined` or `Uncaught TypeError: Cannot read property 'z' of null` exceptions.
 
+### 2. Avoid passing inner object path as string
+
+There is a few popular work arounds for this proplem actually. You can pass object and giving property path as a string or you can extend Object via prototype like here: 
+See: [JS object has property deep check](https://stackoverflow.com/questions/33444711/js-object-has-property-deep-check/33445095#33445095): 
+
+However, when you pass inner object path as string you can't use your IDE's autocomplete support. 
+
 ## Installation
 
 ```
-npm install validate-object-props --save
+npm install try-to-validate --save
 ```
 
 or
 
 ```
-yarn add validate-object-props
+yarn add try-to-validate
 ```
 
 ## Usage
 ```javascript
-import validateObjectProps from 'validate-object-props';
+import tryToValidate from 'try-to-validate';
 
 const me = {x: {y: {z: "I'm here"}}};
 
-if (validateObjectProps(() => me.x.y.z)) {
+if (tryToValidate(() => me.x.y.z)) {
   // you can safely call all properties.
   console.log("This is going to work", me.x.y.z);
 }
 
-if (validateObjectProps(() => me.a.b.c)) {
+if (tryToValidate(() => me.a.b.c)) {
   console.log("This is not going to work since a doesn't exists");
 } 
 ```
@@ -46,16 +54,16 @@ if (validateObjectProps(() => me.a.b.c)) {
 If you don't prefer to use ES6 for a reason, you can use the syntax below:
 
 ```javascript
-var validateObjectProps = require('validate-object-props');
+var tryToValidate = require('try-to-validate');
 
 var me = {x: {y: {z: "I'm here"}}};
 
-if (validateObjectProps(function() { return me.x.y.z})) {
+if (tryToValidate(function() { return me.x.y.z})) {
   // you can safely call all properties.
   console.log("This is going to work", me.x.y.z);
 }
 
-if (validateObjectProps(function() { return me.a.b.c})) {
+if (tryToValidate(function() { return me.a.b.c})) {
   console.log("This is not going to work since a doesn't exists");
 } 
 ```
@@ -69,7 +77,7 @@ So this function just wraps the callback function inside a try catch statement. 
 TL,DR;
 
 ```javascript
-exports.validateObjectProps = function(cb) {
+exports.tryToValidate = function(cb) {
   try {
     return cb();
   } catch (e) {
@@ -77,6 +85,10 @@ exports.validateObjectProps = function(cb) {
   }
 };
 ```
+
+## Be Careful 
+
+Important warnings should come here.
 
 ## Licence (MIT)
 
