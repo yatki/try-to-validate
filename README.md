@@ -74,7 +74,7 @@ Javascript objects are evaluated on runtime. So if you return your object statem
 
 So this function just wraps the callback function inside a try catch statement. If it catches the exception returns false.
 
-TL,DR;
+## TL,DR;
 
 ```javascript
 exports.tryToValidate = function(cb) {
