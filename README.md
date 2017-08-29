@@ -43,7 +43,7 @@ if (validateObjectProps(() => me.a.b.c)) {
 } 
 ```
 
-If you don't prefer to use ES6 for a reason ()which propbably not gonna make sense), you can use the syntax below:
+If you don't prefer to use ES6 for a reason (which propbably not gonna make sense), you can use the syntax below:
 
 ```javascript
 var validateObjectProps = require('validate-object-props');
