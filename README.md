@@ -47,8 +47,11 @@ if (tryToValidate(() => me.x.y.z)) {
 }
 
 if (tryToValidate(() => me.a.b.c)) {
+  // Can't access here
+} else {
+  console.log("It's going to enter this block.");
   console.log("Uncaught TypeError: Cannot read property 'b' of undefined");
-} 
+}
 ```
 
 If you don't prefer to use ES6 for a reason, you can use the syntax below:
@@ -64,8 +67,11 @@ if (tryToValidate(function() { return me.x.y.z})) {
 }
 
 if (tryToValidate(function() { return me.a.b.c})) {
+  // Can't access here
+} else {
+  console.log("It's going to enter this block.");
   console.log("Uncaught TypeError: Cannot read property 'b' of undefined");
-} 
+}
 ```
 
 ## How it works
