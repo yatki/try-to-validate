@@ -47,7 +47,7 @@ if (tryToValidate(() => me.x.y.z)) {
 }
 
 if (tryToValidate(() => me.a.b.c)) {
-  console.log("This is not going to work since a doesn't exists");
+  console.log("Uncaught TypeError: Cannot read property 'b' of undefined");
 } 
 ```
 
@@ -64,7 +64,7 @@ if (tryToValidate(function() { return me.x.y.z})) {
 }
 
 if (tryToValidate(function() { return me.a.b.c})) {
-  console.log("This is not going to work since a doesn't exists");
+  console.log("Uncaught TypeError: Cannot read property 'b' of undefined");
 } 
 ```
 
