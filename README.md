@@ -90,7 +90,7 @@ exports.tryToValidate = function(cb) {
 
 - Be careful when you use `this` inside `arrow functions`! See: [http://es6-features.org/#Lexicalthis](http://es6-features.org/#Lexicalthis)
 - Don't use **exception handling** for your custom logic unless you really know what you are doing. 
-This library **doesn't intend to supress exceptions**. It's just for writing shorter conditions when you need to compare objects.
+This library **doesn't intend to suppress exceptions**. It's just for writing shorter conditions when you need to compare objects.
  
 ## Licence (MIT)
 
