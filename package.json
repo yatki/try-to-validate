@@ -1,0 +1,20 @@
+{
+  "name": "validate-object-props",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/yatki/validate-object-props.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/yatki/validate-object-props/issues"
+  },
+  "homepage": "https://gitlab.com/yatki/validate-object-props#README"
+}
