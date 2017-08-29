@@ -7,7 +7,7 @@ When you have to deal with big objects which have nested properties, you always 
 
 So probably you will end up a code like below:
 
-```ecmascript 6
+```javascript
 if (me && me.x && me.x.y && me.x.y.z === 'something') {
   // hopefully come here without any exception
 }
@@ -28,7 +28,7 @@ yarn add validate-object-props
 ```
 
 ## Usage
-```ecmascript 6
+```javascript
 import validateObjectProps from 'validate-object-props';
 
 const me = {x: {y: {z: "I'm here"}}};
