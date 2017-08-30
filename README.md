@@ -84,7 +84,7 @@ So this function just wraps the callback function inside a try catch statement. 
 
 When it comes to performance please note that extending object via prototype approach is 10x times faster than using try/catch blocks.
 
-See yourself: [https://jsfiddle.net/yatki/382qoy13/](https://jsfiddle.net/yatki/382qoy13/) 
+See yourself: [https://jsfiddle.net/yatki/382qoy13/1/](https://jsfiddle.net/yatki/382qoy13/1/) 
 
 ```
 try/catch average: 0.006678999999999928
