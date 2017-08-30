@@ -10,7 +10,9 @@ So probably you will end up a code like below:
 
 ```javascript
 if (me && me.x && me.x.y && me.x.y.z === 'something') {
-  // hopefully come here without any exception
+  // we did 3 unnecessary checks just to get here
+  // I'm not metioning you'll have property names longer than 1 character.
+  // So imagine how long this if statement can get sometimes.
 }
 ```
 
