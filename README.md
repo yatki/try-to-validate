@@ -80,10 +80,30 @@ Javascript objects are evaluated on runtime. So if you return your object statem
 
 So this function just wraps the callback function inside a try catch statement. If it catches the exception returns false.
 
+## Performance
+
+When it comes to performance please note that extending object via prototype approach is 10x times faster than using try/catch blocks.
+
+See yourself: [https://jsfiddle.net/yatki/382qoy13/](https://jsfiddle.net/yatki/382qoy13/) 
+
+```
+try/catch average: 0.006678999999999928
+prototype average: 0.0007430000000000064
+try/catch average: 0.006343999999999778
+prototype average: 0.0005649999999998499
+try/catch average: 0.006257999999999845
+prototype average: 0.0005689999999998349
+try/catch average: 0.006386000000000012
+prototype average: 0.0005769999999998618
+```
+
+I'm currently looking for a way to improve these results. Any contribution is welcome :) 
+
 ## TL,DR;
 
 ```javascript
-exports.tryToValidate = function(cb) {
+'use strict';
+module.exports = function(cb) {
   try {
     return cb();
   } catch (e) {
