@@ -119,7 +119,8 @@ prototype average on failed match: 0.000776000000000181
 
 So both solutions have their disadvantages and advantages depending on your logic. 
 
-Let's say, you know you'll have the properties most of the time in your response object from api. However, you want to validate if properties exist (just in case for not breaking the app), then using this function can be more useful. 
+Let's say, you know you'll have the properties most of the time in your response object from api. 
+However, you want to validate if properties exist (just to make sure app doesn't crash), then using this function can be more useful. 
 
 I'm currently looking for a way to improve these results. Any contribution is welcome :) 
 
