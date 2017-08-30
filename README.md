@@ -1,4 +1,4 @@
-# Try to Validate
+# Try to Validate [![NPM version](https://badge.fury.io/js/try-to-validate.svg)](https://www.npmjs.com/package/try-to-validate)
 > A simple function to validate if nested object properties exist.
 
 ## Why
