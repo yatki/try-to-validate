@@ -19,7 +19,7 @@ Otherwise you may get `Uncaught TypeError: Cannot read property 'y' of undefined
 ### 2. Avoid passing inner object path as string
 
 There is a few popular work arounds for this proplem actually. You can pass object and giving property path as a string or you can extend Object via prototype like here: 
-See: [JS object has property deep check](https://stackoverflow.com/questions/33444711/js-object-has-property-deep-check/33445095#33445095): 
+See the topic: [JS object has property deep check](https://stackoverflow.com/questions/33444711/js-object-has-property-deep-check/33445095#33445095) 
 
 However, when you pass inner object path as string you can't use your IDE's autocomplete support. 
 
@@ -82,20 +82,44 @@ So this function just wraps the callback function inside a try catch statement. 
 
 ## Performance
 
-When it comes to performance please note that extending object via prototype approach is 10x times faster than using try/catch blocks.
+When it comes to performance, it's hard to say which approach is better. 
 
-See yourself: [https://jsfiddle.net/yatki/382qoy13/1/](https://jsfiddle.net/yatki/382qoy13/1/) 
+On my tests **if the object properties exist and the statement is successful** I noticed using try/catch is **faster** than spliting string to keys and checking if keys exist in the object.
+
+But if the property doesn't exist at some point, prototype approach returns the result faster.
+
+See the test yourself: [https://jsfiddle.net/yatki/382qoy13/2/](https://jsfiddle.net/yatki/382qoy13/2/) 
 
 ```
-try/catch average: 0.006678999999999928
-prototype average: 0.0007430000000000064
-try/catch average: 0.006343999999999778
-prototype average: 0.0005649999999998499
-try/catch average: 0.006257999999999845
-prototype average: 0.0005689999999998349
-try/catch average: 0.006386000000000012
-prototype average: 0.0005769999999998618
+try/catch average on successful match: 0.0004890000000001464
+prototype average on successful match: 0.0016609999999999219
+try/catch average on failed match: 0.006114000000000237
+prototype average on failed match: 0.0007670000000000073
+
+try/catch average on successful match: 0.000776999999999839
+prototype average on successful match: 0.0017189999999998918
+try/catch average on failed match: 0.0073909999999999055
+prototype average on failed match: 0.0010010000000001582
+
+try/catch average on successful match: 0.0005130000000001587
+prototype average on successful match: 0.0014160000000001446
+try/catch average on failed match: 0.00665100000000009
+prototype average on failed match: 0.0008019999999999186
+
+try/catch average on successful match: 0.000561000000000081
+prototype average on successful match: 0.0014359999999998764
+try/catch average on failed match: 0.00575400000000011
+prototype average on failed match: 0.0008070000000000391
+
+try/catch average on successful match: 0.0008199999999998909
+prototype average on successful match: 0.00160899999999981
+try/catch average on failed match: 0.006409000000000162
+prototype average on failed match: 0.000776000000000181
 ```
+
+So both solutions have their disadvantages and advantages depending on your logic. 
+
+Let's say, you know you'll have the properties most of the time in your response object from api. However, you want to validate if properties exist (just in case for not breaking the app), then using this function can be more useful. 
 
 I'm currently looking for a way to improve these results. Any contribution is welcome :) 
 
@@ -114,7 +138,7 @@ module.exports = function(cb) {
 
 ## Warnings 
 
-- Be careful when you use `this` inside `arrow functions`! See: [http://es6-features.org/#Lexicalthis](http://es6-features.org/#Lexicalthis)
+- Be careful when you use `this` inside `arrow functions`. See: [http://es6-features.org/#Lexicalthis](http://es6-features.org/#Lexicalthis)
 - Don't use **exception handling** for your custom logic unless you really know what you are doing. 
 This library **doesn't intend to suppress exceptions**. 
 It's just for writing shorter conditions when you need to compare objects.
