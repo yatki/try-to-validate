@@ -1,6 +1,6 @@
 {
   "name": "try-to-validate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "> A simple function to validate if nested object properties exist.",
   "main": "index.js",
   "scripts": {
