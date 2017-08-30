@@ -84,9 +84,9 @@ So this function just wraps the callback function inside a try catch statement. 
 
 When it comes to performance, it's hard to say which approach is better. 
 
-On my tests **if the object properties exist and the statement is successful** I noticed using try/catch is **faster** than spliting string to keys and checking if keys exist in the object.
+On my tests **if the object properties exist and the statement is successful** I noticed using try/catch can be 3x 4x times **faster** than spliting string to keys and checking if keys exist in the object.
 
-But if the property doesn't exist at some point, prototype approach returns the result faster.
+But if the property doesn't exist at some point, prototype approach returns the result almost 10x times faster.
 
 See the test yourself: [https://jsfiddle.net/yatki/382qoy13/2/](https://jsfiddle.net/yatki/382qoy13/2/) 
 
