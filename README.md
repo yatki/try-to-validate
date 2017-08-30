@@ -99,7 +99,7 @@ prototype average: 0.0005769999999998618
 
 I'm currently looking for a way to improve these results. Any contribution is welcome :) 
 
-## TL,DR;
+## TL;DR
 
 ```javascript
 'use strict';
