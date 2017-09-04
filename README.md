@@ -93,7 +93,7 @@ module.exports = function(cb) {
 
 Javascript objects are evaluated on runtime. So if you return your object statement in a callback function, that statement is not going to be evaluated until callback function is invoked.
 
-That's why you can't pass your object stament as parameter like below.
+That's why you can't pass your object stament as parameter like in the example below:
 
 ```javascript
 if (tryToValidate(me.x.y.z)) {
@@ -102,7 +102,7 @@ if (tryToValidate(me.x.y.z)) {
 }
 ```
 
-Because on this line: `if (tryToValidate(me.x.y.z)) {` parameter will be evaluated and `me.x.y.z` is going to cause the exception.
+Because on this line: `if (tryToValidate(me.x.y.z)) {` your statement will be evaluated and `me.x.y.z` is going to cause the exception.
 
 So, this function just wraps the callback function inside a try catch statement. If it catches the exception returns false.
 
