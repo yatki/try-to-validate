@@ -97,8 +97,7 @@ That's why you can't pass your object stament as parameter like in the example b
 
 ```javascript
 if (tryToValidate(me.x.y.z)) {
-  // you can safely call all properties.
-  console.log("This is going to work", me.x.y.z);
+  // you can't reach here.
 }
 ```
 
