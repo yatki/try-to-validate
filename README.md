@@ -76,11 +76,35 @@ if (tryToValidate(function() { return me.a.b.c})) {
 }
 ```
 
+## TL;DR
+
+```javascript
+'use strict';
+module.exports = function(cb) {
+  try {
+    return cb();
+  } catch (e) {
+    return false;
+  }
+};
+```
+
 ## How it works
 
 Javascript objects are evaluated on runtime. So if you return your object statement in a callback function, that statement is not going to be evaluated until callback function is invoked.
 
-So this function just wraps the callback function inside a try catch statement. If it catches the exception returns false.
+That's why you can't pass your object stament as parameter like below.
+
+```javascript
+if (tryToValidate(me.x.y.z)) {
+  // you can safely call all properties.
+  console.log("This is going to work", me.x.y.z);
+}
+```
+
+Because on this line: `if (tryToValidate(me.x.y.z)) {` parameter will be evaluated and `me.x.y.z` is going to cause the exception.
+
+So, this function just wraps the callback function inside a try catch statement. If it catches the exception returns false.
 
 ## Performance
 
@@ -125,19 +149,6 @@ Let's say, you know you'll have the properties most of the time in your response
 However, you want to validate if properties exist (just to make sure app doesn't crash), then using this function can be more useful. 
 
 I'm currently looking for a way to improve these results. Any contribution is welcome :) 
-
-## TL;DR
-
-```javascript
-'use strict';
-module.exports = function(cb) {
-  try {
-    return cb();
-  } catch (e) {
-    return false;
-  }
-};
-```
 
 ## Warnings 
 
