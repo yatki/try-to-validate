@@ -10,8 +10,8 @@ So instead of writing something like this:
 
 ```javascript
 if (me && me.x && me.x.y && me.x.y.z === 'something') {
-  // we did 3 unnecessary checks just to get here
-  // I'm not metioning you'll have property names longer than 1 character.
+  // we had to do 3 property checks just to get here
+  // I'm not metioning you'll have property names "longer" than 1 character.
   // So imagine how long this if statement can get sometimes.
 }
 ```
