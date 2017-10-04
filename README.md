@@ -20,9 +20,7 @@ Write something like this:
 
 ```javascript
 if (tryToValidate(() =>  me.x.y.z === 'something')) {
-  // we did 3 unnecessary checks just to get here
-  // I'm not metioning you'll have property names longer than 1 character.
-  // So imagine how long this if statement can get sometimes.
+  // do your magic here
 }
 ```
 
