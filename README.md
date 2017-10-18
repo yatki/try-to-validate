@@ -1,5 +1,6 @@
 # Try to Validate 
 > A simple function to validate if nested object properties exist.
+
 [![NPM version](https://badge.fury.io/js/try-to-validate.svg)](https://www.npmjs.com/package/try-to-validate)
 [![npm](https://img.shields.io/npm/dt/try-to-validate.svg)](https://www.npmjs.com/package/try-to-validate)
 
