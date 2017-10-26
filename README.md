@@ -167,28 +167,16 @@ I'm currently looking for a way to improve these results. Any contribution is we
 This library **doesn't intend to suppress exceptions**. 
 It's just for writing shorter conditions when you need to compare objects.
  
-## Licence (MIT)
+## Contribution
 
-```
-MIT License
+As always, I'm open to any contribution and would like to hear your feedback. 
 
-Copyright (c) 2017 Mehmet Yatkı, mehmet@yatki.com
+### Just an important reminder:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+If you are planning to contribute to **any** open source project, 
+before starting development, please **always open an issue** and **make a proposal first**. 
+This will save you from working on features that are eventually going to be rejected for some reason.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## LICENCE
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+MIT (c) 2017 Mehmet Yatkı
