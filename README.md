@@ -4,6 +4,9 @@
 [![NPM version](https://badge.fury.io/js/try-to-validate.svg)](https://www.npmjs.com/package/try-to-validate)
 [![npm](https://img.shields.io/npm/dt/try-to-validate.svg)](https://www.npmjs.com/package/try-to-validate)
 
+## DEPRECATED !!!
+**THIS LIBRARY IS DEPRECATED**. Fortunately we have a much better solution now: [Optional Chanining](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining).
+
 ## Why
 
 ### 1. Avoid writing long if conditions for object properties
